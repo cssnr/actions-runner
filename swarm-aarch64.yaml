@@ -10,7 +10,7 @@ services:
       ORG_NAME: cssnr
       ACCESS_TOKEN: "${GH_PAT}"
       RUNNER_WORKDIR: /_work
-      LABELS: swarm-aarch64
+      #LABELS: swarm-aarch64
       #RUNNER_GROUP: my-group
       DEBUG_OUTPUT: "true"
     deploy:

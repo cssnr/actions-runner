@@ -10,6 +10,7 @@ services:
       ORG_NAME: cssnr
       APP_ID: 1162137
       APP_PRIVATE_KEY: ${APP_PRIVATE_KEY}
+      #ACCESS_TOKEN: ${GH_PAT}
       RUNNER_WORKDIR: /_work
       DEBUG_OUTPUT: "true"
     deploy:

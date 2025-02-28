@@ -28,4 +28,8 @@ jobs:
           type: file
           url: ${{ secrets.PORTAINER_URL }}
           token: ${{ secrets.PORTAINER_TOKEN }}
-          env_json: '{"APP_PRIVATE_KEY": "${{ secrets.ACTIONS_RUNNER_APP_KEY }}", "VERSION": "${{ inputs.VERSION }}"}'
+          env_json: |
+            {
+              "APP_PRIVATE_KEY": "${{ secrets.APP_PRIVATE_KEY }}",
+              "VERSION": "${{ inputs.VERSION }}"
+            }

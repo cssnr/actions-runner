@@ -2,16 +2,15 @@ version: "3.8"
 
 services:
   actions-runner:
-    image: myoung34/github-runner:latest
+    image: myoung34/github-runner:${VERSION:-latest}
     restart: always
     environment:
       RUNNER_NAME: swarm-aarch64
       RUNNER_SCOPE: org
       ORG_NAME: cssnr
-      ACCESS_TOKEN: "${GH_PAT}"
+      APP_ID: 1162137
+      APP_PRIVATE_KEY: ${APP_PRIVATE_KEY}
       RUNNER_WORKDIR: /_work
-      #LABELS: swarm-aarch64
-      #RUNNER_GROUP: my-group
       DEBUG_OUTPUT: "true"
     deploy:
       replicas: 1
